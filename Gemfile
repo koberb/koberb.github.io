@@ -8,3 +8,5 @@ gem 'middleman-deploy', github: 'shawnzvinis/middleman-deploy'
 
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
+
+gem 'bootstrap', '~> 4.0.0.beta'

@@ -1,0 +1,46 @@
+!!! 5
+%html{ lang: 'ja' }
+  %head
+    :ruby
+      title = current_page.data.title || 'Kobe.rb'
+      description = current_page.data.title || '神戸のプログラミング言語Rubyのコミュニティです。'
+      image = "https://koberb.github.io#{image_path('hero-koberb.jpg')}"
+      canonical = "https://koberb.github.io/#{current_page.path}"
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'viewport', content: 'initial-scale=1.0, user-scalable=no' }
+    %meta{ 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
+    %title= title
+    %meta{ name: 'description', content: description }
+    -# OGP
+    %meta{ property: 'og:title', content: title }
+    %meta{ property: 'og:description', content: description }
+    %meta{ property: 'og:image', content: image }
+    %meta{ property: 'og:url', content: canonical }
+    %meta{ property: 'og:site_name', content: 'Kobe.rb' }
+    %meta{ property: 'og:locale', content: 'ja_JP' }
+    %meta{ property: 'og:type', content: 'website' }
+    -# Twitter
+    -#%meta{ name: 'twitter:card', content: 'summary' }
+    -#%meta{ name: 'twitter:site', content: '@xxxxxxxx' }
+    -# Facebook
+    -#%meta{ property: 'fb:app_id', content: 'xxxxxxxx' }
+    -#= favicon_link_tag 'icon-theme.png', type: 'image/png'
+    -#= favicon_link_tag 'icon-theme.png', rel: 'apple-touch-icon', type: 'image/png'
+    = stylesheet_link_tag 'site'
+    = javascript_include_tag 'site', defer: true, async: true
+  %body
+    #wrapper
+      .container
+        = yield
+    %footer#global-footer
+      .container
+        %h1.mt-3 Kobe.rb
+        %p= link_to('お問い合わせ', 'https://koberb.doorkeeper.jp/contact/new')
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-105166057-1', 'auto');
+      ga('send', 'pageview');
