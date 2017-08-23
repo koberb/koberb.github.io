@@ -2,10 +2,11 @@
 %html{ lang: 'ja' }
   %head
     :ruby
+      binding.irb
       title = current_page.data.title || 'Kobe.rb'
       description = current_page.data.title || '神戸のプログラミング言語Rubyのコミュニティです。'
       image = "https://koberb.github.io#{image_path('hero-koberb.jpg')}"
-      canonical = "https://koberb.github.io/#{current_page.path}"
+      canonical = "https://koberb.github.io#{current_page.url}"
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'initial-scale=1.0, user-scalable=no' }
     %meta{ 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
