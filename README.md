@@ -15,6 +15,8 @@ is built with [Middleman](https://middlemanapp.com/jp/)!
 $ bundle exec middleman
 ```
 
+http://localhost:4567/ でサーバーが動きます。
+
 ### ブランチ戦略
 
 Default Branchが `middleman` なので、ここにコミットするかPR作成してください。
